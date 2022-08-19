@@ -19,7 +19,7 @@ const Layout = () => {
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-links">
-            <li className="navbar-toggle">
+            <li className="navbar-toggle">onClick={showSidebar}
               <Link className="menu-bars" to="#" onClick={showSidebar}>
                 <AiIcons.AiOutlineClose />
               </Link>
