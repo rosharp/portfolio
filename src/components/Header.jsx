@@ -1,13 +1,14 @@
 import React from "react";
+import Avatar from "../images/avatar.png";
 
 const Header = () => {
   return (
-  <div>
+  <div className="header-home">
     <h1>Hello, <span>I'm Vitaly</span></h1>
-    <i>Frontend Developer</i>
-    <i>Translator</i>
+    <p>Frontend Developer</p>
+    <p>Translator</p>
 
-    <img alt="avatar-of-me" />
+    <img className="avatar-img" src={Avatar} alt="avatar" />
 
     <p>Some text about me</p>
 
