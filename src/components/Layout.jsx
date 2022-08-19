@@ -13,14 +13,14 @@ const Layout = () => {
     return (
         <>
         <div className="navbar">
-            <Link className="menu-bars" to="#">
-                <FaIcons.FaBars />
+            <Link className="menu-bars" to="#" onClick={showSidebar}>
+                <FaIcons.FaBars className="navbar-show" />
             </Link>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
             <ul className="nav-links">
                 <li className="navbar-toggle">
-                    <Link className="menu-bars" to="#">
+                    <Link className="menu-bars" to="#" onClick={showSidebar}>
                         <AiIcons.AiOutlineClose />
                     </Link>
                 </li>

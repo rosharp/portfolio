@@ -2,7 +2,7 @@ import React from "react";
 
 const Web = () => {
     return (
-        <div>
+        <div id="web">
             <h2>Web</h2>
             <p>Work I've done that resides out there, somewhere in the vast virtual space of the Internet.</p>
             <div>
