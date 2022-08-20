@@ -4,7 +4,6 @@ import { HashLink as Link } from "react-router-hash-link";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
-import { IconContext } from "react-icons";
 
 const Layout = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -19,7 +18,7 @@ const Layout = () => {
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-links">
-            <li className="navbar-toggle">onClick={showSidebar}
+            <li className="navbar-toggle">
               <Link className="menu-bars" to="#" onClick={showSidebar}>
                 <AiIcons.AiOutlineClose />
               </Link>
