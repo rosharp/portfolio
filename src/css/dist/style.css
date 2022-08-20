@@ -159,6 +159,17 @@ body {
   margin-block: 1rem;
 }
 
+.footer {
+  display: grid;
+  margin-inline: auto;
+  justify-content: center;
+}
+.footer img {
+  object-fit: contain;
+  justify-self: center;
+  max-width: 3rem;
+}
+
 @media (max-width: 1000px) {
   #web, #about {
     margin-bottom: 60vh;

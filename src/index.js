@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import "./css/dist/style.css";
+import "./css/style.css";
 import 'swiper/css';
 import "swiper/css/bundle";
 import reportWebVitals from './reportWebVitals';

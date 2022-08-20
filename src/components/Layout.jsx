@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
+import Footer from "./Footer";
 
 const Layout = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -41,7 +42,8 @@ const Layout = () => {
         <Outlet />
       </div>
 
-      <footer>2022</footer>
+
+      <Footer />
     </>
   );
 };
