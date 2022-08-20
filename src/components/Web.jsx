@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SpaceRound from "../images/space/Moon-mobile-cropped.png";
 import ShopitRound from "../images/shopIT/shopit-main-cropped.png";
 import IntroRound from "../images/intro section/intro-mobile-cropped.png";
@@ -10,10 +11,10 @@ const Web = () => {
             <h2>Web</h2>
             <p>Work I've done that resides out there, somewhere in the vast virtual space of the Internet.</p>
             <div className="projects">
-                <img className="round-img" alt="shopit" src={ShopitRound} />
-                <img className="round-img" alt="space" src={SpaceRound} />
-                <img className="round-img" alt="intro" src={IntroRound} />
-                <img className="round-img" alt="interactive-rating-component" src={RatingRound} />
+                <Link to="shopit"><img className="round-img" alt="shopit" src={ShopitRound} /></Link>
+                <Link to="space"><img className="round-img" alt="space" src={SpaceRound} /></Link>
+                <Link to="intro"><img className="round-img" alt="intro" src={IntroRound} /></Link>
+                <Link to="rating"><img className="round-img" alt="interactive-rating-component" src={RatingRound} /></Link>
             </div>
         </div>
     );
