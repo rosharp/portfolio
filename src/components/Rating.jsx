@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,6 +18,10 @@ const Images = [
 ];
 
 export default function App() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   return (
     <>
       <h1>Rating</h1>

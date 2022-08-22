@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -22,11 +22,11 @@ import ShopitOrders from "../images/shopIT/shopit-orders.png";
 import ShopitOrderInfo from "../images/shopIT/shopit-order-info.png";
 
 const Images = [
-  ShopitMain, 
-  ShopitProduct, 
-  ShopitSearch, 
-  ShopitCart, 
-  ShopitCheckout,  
+  ShopitMain,
+  ShopitProduct,
+  ShopitSearch,
+  ShopitCart,
+  ShopitCheckout,
   ShopitConfirmOrder,
   ShopitPayment,
   ShopitShippingInfo,
@@ -36,6 +36,10 @@ const Images = [
 ];
 
 export default function App() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   return (
     <>
       <h1>Shopit</h1>

@@ -126,7 +126,7 @@ a {
 
 .divider {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 5rem;
   height: 1px;
 }
@@ -164,7 +164,6 @@ body {
 }
 
 .header-home {
-  margin-top: 12vh;
   text-align: center;
 }
 .header-home h1 {
@@ -257,6 +256,12 @@ body {
   .navbar-show {
     height: 100px;
     display: fixed;
+  }
+  .header-home {
+    margin-top: 5vh;
+  }
+  .header-btn-container {
+    margin-top: 1rem;
   }
   .avatar-img {
     padding-top: 0.5rem;
