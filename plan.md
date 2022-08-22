@@ -25,10 +25,11 @@ Jeans blue: #064663
 Cream yellow: #ECB365
 
 ## Todo
-* Top hamburger margin
-* Add padding to each section below
-* Fix routing (don't show the top each time I close sidebar)
-* Screenshots of projects in canva/figma
-* Carousel with images
 * Desktop layout
 * Check out some other fonts
+* Toggling in sidebar
+* Create the content
+* Full-width carousel
+* h1/h2/h3 margins
+* Custom scroll bar
+* Show sticky navbar on scroll up
