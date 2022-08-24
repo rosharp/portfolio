@@ -23,12 +23,7 @@ h3 {
   line-height: 1;
   font-size: 4rem;
   color: #ECB365;
-}
-
-h2,
-h3,
-p {
-  margin-bottom: 0em;
+  margin-bottom: 1.25rem;
 }
 
 p,
@@ -120,6 +115,28 @@ a {
   object-fit: cover;
 }
 
+.wrapper {
+  padding-bottom: 90px;
+}
+
+.divider {
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height: 1px;
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  height: 1.5px;
+  background-image: linear-gradient(to right, transparent, #ECB365, transparent);
+}
+
 body {
   background: #041C32;
 }
@@ -142,8 +159,6 @@ body {
 }
 
 .header-home {
-  margin-top: 18vh;
-  margin-bottom: 20vh;
   text-align: center;
 }
 .header-home h1 {
@@ -161,18 +176,31 @@ body {
 
 .footer {
   display: grid;
-  margin-inline: auto;
   justify-content: center;
+}
+.footer p {
+  margin-bottom: 2rem;
+  justify-self: center;
+  color: #064663;
 }
 .footer img {
   object-fit: contain;
   justify-self: center;
   max-width: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1000px) {
-  #web, #about {
-    margin-bottom: 60vh;
+  .hidden {
+    position: fixed;
+    top: -5rem;
+    transition: 200ms;
+  }
+
+  .active {
+    position: fixed;
+    top: 2rem;
+    transition: 200ms;
   }
 
   .menu-bars {
@@ -207,6 +235,7 @@ body {
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+    margin-bottom: 1rem;
   }
   .nav-text span {
     margin-left: 16px;
@@ -238,6 +267,18 @@ body {
     align-items: center;
   }
 
+  .navbar-show {
+    height: 2rem;
+    transition: 200ms;
+  }
+
+  .header-home {
+    padding-top: 20vh;
+  }
+  .header-home .header-btn-container {
+    margin-top: 5rem;
+  }
+
   .avatar-img {
     padding-top: 0.5rem;
   }
@@ -248,12 +289,15 @@ body {
 
   .header-btn {
     margin-inline: clamp(0.75rem, 2vh, 4rem);
-    margin-top: 5rem;
   }
 
   .projects {
     display: grid;
     justify-content: center;
     grid: repeat(2, 12rem)/auto-flow 11rem;
+  }
+
+  .footer-btn-container {
+    margin-bottom: 2rem;
   }
 }

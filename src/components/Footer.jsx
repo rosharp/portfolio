@@ -9,7 +9,7 @@ function Footer() {
       <img src={Stars} alt="" />
       <p>{currentDate} Ro Sharp</p>
 
-      <div className="header-btn-container">
+      <div className="footer-btn-container">
         <a className="header-btn" href="https://www.linkedin.com/in/vitaliy-bekshnev-8399b4248/"><FaIcons.FaLinkedin className="header-icon" /></a>
         <a className="header-btn" href="https://github.com/rosharp"><FaIcons.FaGithub className="header-icon" /></a>
         <a className="header-btn" href="mailto:vy.bekshnev@gmail.com"><FaIcons.FaMailBulk className="header-icon" /></a>

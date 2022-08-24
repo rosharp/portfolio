@@ -21,6 +21,7 @@ const Header = () => {
         <a className="header-btn" href="https://www.linkedin.com/in/vitaliy-bekshnev-8399b4248/"><FaIcons.FaLinkedin className="header-icon" /></a>
         <a className="header-btn" href="https://github.com/rosharp"><FaIcons.FaGithub className="header-icon" /></a>
         <a className="header-btn" href="mailto:vy.bekshnev@gmail.com"><FaIcons.FaMailBulk className="header-icon" /></a>
+        <a className="header-btn" href="/downloads/Vitaliy_Bekshnev_CV.pdf" download><FaIcons.FaFileDownload className="header-icon" /></a>
       </div>
       <Divider />
     </div>

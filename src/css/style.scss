@@ -36,12 +36,7 @@ h3 {
   line-height: 1;
   font-size: 4rem;
   color: $clr-accent-100;
-}
-
-h2,
-h3,
-p {
-  margin-bottom: 0em;
+  margin-bottom: 1.25rem;
 }
 
 p,
@@ -140,7 +135,7 @@ a {
 
 .divider {
   position: relative;
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
 	height: 1px;
 }
@@ -230,6 +225,18 @@ body {
 }
 
 @media(max-width: 1000px) {
+  .hidden {
+    position: fixed;
+    top: -5rem;
+    transition: 200ms;
+  }
+
+  .active {
+    position: fixed;
+    top: 2rem;
+    transition: 200ms;
+  }
+
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -262,6 +269,7 @@ body {
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+    margin-bottom: 1rem;
 
     span {
       margin-left: 16px;
@@ -297,17 +305,18 @@ body {
   }
 
   .navbar-show {
-    height: 100px;
-    display: fixed;
+    height: 2rem;
+    transition: 200ms;
   }
 
   .header-home {
-    margin-top: 5vh;
+    padding-top: 20vh;
+
+    .header-btn-container {
+      margin-top: 5rem;
+    }
   }
 
-  .header-btn-container {
-    margin-top: 1rem;
-  }
 
   .avatar-img {
     padding-top: .5rem;
@@ -322,12 +331,15 @@ body {
 
   .header-btn {
     margin-inline: clamp(.75rem, 2vh, 4rem);
-    margin-top: 5rem;
   }
 
   .projects {
     display: grid;
     justify-content: center;
     grid: repeat(2, 12rem) / auto-flow 11rem;
+  }
+
+  .footer-btn-container {
+    margin-bottom: 2rem;
   }
 }
