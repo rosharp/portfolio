@@ -56,34 +56,6 @@ a {
   text-decoration: inherit;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.overlay {
-  position: absolute;
-  background: $clr-neutral-200;
-  transition: 350ms ease-in-out;
-  z-index: 1000;
-}
-
-.overlay:after {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  left: 0;
-  top: 0;
-  z-index: 0;
-}
-
 .active {
   color: hsl(191, 32%, 56%);
 }
@@ -108,8 +80,6 @@ a {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -156,17 +126,6 @@ a {
 body {
   background: $clr-neutral-400;
 }
-
-// nav {
-//   display: flex;
-//   justify-content: start;
-//   align-items: center;
-//   height: 80px;
-//   background-color: #060b26;
-//   color: rgb(237, 237, 237);
-// }
-
-
 
 .header-btn {
   background: none;
@@ -236,10 +195,10 @@ body {
 @media(max-width: 1000px) {
 
   .active {
-  position: fixed;
-  top: 2rem;
-  transition: 200ms;
-}
+    position: fixed;
+    top: 2rem;
+    transition: 200ms;
+  }
 
   .menu-bars {
     margin-left: 2rem;
@@ -350,13 +309,13 @@ body {
 
 @media (min-width: 1000px) {
 
+  h1 {
+    font-size: 5rem;
+  }
+
   .navbar-show,
   .navbar-close {
     display: none;
-  }
-
-  .link-active {
-    color: red;
   }
 
   .nav-menu {
@@ -377,7 +336,7 @@ body {
     backdrop-filter: blur(8px);
     padding-block: 1rem;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 25px;
     transition: 850ms;
     z-index: 9999;
@@ -399,6 +358,17 @@ body {
         margin-left: 8px;
       }
     }
+  }
 
+  .header-home {
+    margin-top: 4rem;
+
+    .header-btn {
+      margin-inline: clamp(.75rem, 1vh, 3rem);
+
+      & * {
+        font-size: 2.5rem;
+      }
+    }
   }
 }

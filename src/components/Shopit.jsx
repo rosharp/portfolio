@@ -1,13 +1,10 @@
 import React, { useLayoutEffect } from "react";
-// Import Swiper React components
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
-// import required modules
 import { Navigation } from "swiper";
+
 
 import ShopitMain from "../images/shopIT/shopit-main.png";
 import ShopitProduct from "../images/shopIT/shopit-product.png";
@@ -20,6 +17,7 @@ import ShopitShippingInfo from "../images/shopIT/shopit-shipping-info.png";
 import ShopitSuccess from "../images/shopIT/shopit-success.png";
 import ShopitOrders from "../images/shopIT/shopit-orders.png";
 import ShopitOrderInfo from "../images/shopIT/shopit-order-info.png";
+
 
 const Images = [
   ShopitMain,
@@ -41,7 +39,11 @@ export default function App() {
   });
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1>Shopit</h1>
       <p>Ecommerce website in MERN</p>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
@@ -75,6 +77,6 @@ export default function App() {
         <li>Deployment</li>
         <li>Your Task / Assignment</li>
       </ul>
-    </>
+    </motion.div>
   );
 }

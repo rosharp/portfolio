@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 
 const Resume = () => {
   useLayoutEffect(() => {
@@ -6,7 +7,11 @@ const Resume = () => {
   });
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h2>Vitaly Bekshnev</h2>
       <h3>Frontend Developer</h3>
 
@@ -31,7 +36,7 @@ const Resume = () => {
           {/* Some content about my education */}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

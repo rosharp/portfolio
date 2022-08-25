@@ -1,12 +1,8 @@
 import React, { useLayoutEffect } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
-
-// import required modules
 import { Navigation } from "swiper";
 
 import SpaceMain from "../images/space/Space.png";
@@ -37,7 +33,11 @@ export default function App() {
   });
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1>Space</h1>
       <p>Fully Responsive Space Tourism Website</p>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
@@ -49,6 +49,6 @@ export default function App() {
           })
         }
       </Swiper>
-    </>
+    </motion.div>
   );
 }
