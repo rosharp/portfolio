@@ -21,7 +21,6 @@ h3 {
   font-family: "Epilogue", sans-serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 4rem;
   color: #ECB365;
   margin-bottom: 1.25rem;
 }
@@ -145,6 +144,54 @@ body {
   margin-block: 1rem;
 }
 
+.cards-container {
+  display: grid;
+  grid: repeat(2, 30rem)/auto-flow 30rem;
+}
+.cards-container > * {
+  margin-inline: 2rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
+  backdrop-filter: blur(8px);
+  margin-block: 2rem;
+  border-radius: 30px;
+  max-width: 40rem;
+}
+.card p {
+  margin-inline: 2rem;
+}
+.card * {
+  margin-block: 0.5rem;
+}
+
+.card-btn {
+  background: #ECB365;
+  color: #064663;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.card-btn:hover {
+  background: linear-gradient(100deg, #ebcda2, #ECB365);
+  --underline-width: 100%;
+  transition: background 300ms;
+}
+.card-btn span {
+  background: linear-gradient(#041C32 0 0) bottom left/var(--underline-width, 0%) 0.1em no-repeat;
+  padding-left: 7px;
+  transition: background-size 0.5s;
+}
+
 .footer {
   display: grid;
   justify-content: center;
@@ -263,6 +310,12 @@ body {
   h1 {
     font-size: 5rem;
   }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
   .navbar-show,
 .navbar-close {
     display: none;
@@ -284,7 +337,7 @@ body {
     padding-block: 1rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     transition: 850ms;
     z-index: 9999;
   }

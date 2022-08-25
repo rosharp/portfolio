@@ -1,17 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Avatar from "../images/avatar.png";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import Divider from "./Divider";
+import textAnimationY from "./animations/textAnimationY";
+
 
 const Header = () => {
+
   return (
-    <div className="header-home">
-      <h1>Hello, <span>I'm Vitaly</span></h1>
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      className="header-home"
+    >
+      <motion.h1 custom={1} variants={textAnimationY}>Hello, <span>I'm Vitaly</span></motion.h1>
 
       <div className="header-p">
-        <p>Frontend Developer</p>
-        <p>Translator</p>
+        <motion.p custom={2} variants={textAnimationY}>Frontend Developer</motion.p>
+        <motion.p custom={2} variants={textAnimationY}>Translator</motion.p>
       </div>
 
       <img className="avatar-img" src={Avatar} alt="avatar" />
@@ -24,7 +32,7 @@ const Header = () => {
         <a className="header-btn" href="/downloads/Vitaliy_Bekshnev_CV.pdf" download><FaIcons.FaFileDownload className="header-icon" /></a>
       </div>
       <Divider />
-    </div>
+    </motion.div>
   );
 }
 

@@ -14,6 +14,10 @@ $clr-accent-200: #ebcda2;
 $clr-neutral-300-trsp: rgb(4, 41, 58, .75);
 $clr-neutral-200-trsp: rgb(6, 70, 99, .75);
 
+$clr-accent-100-trsp: rgb(236, 179, 101, .75);
+$clr-accent-200-trsp: rgb(235, 205, 162, .75);
+
+
 *,
 *::before,
 *::after {
@@ -36,7 +40,6 @@ h3 {
   font-family: $Epilogue;
   font-weight: 700;
   line-height: 1;
-  font-size: 4rem;
   color: $clr-accent-100;
   margin-bottom: 1.25rem;
 }
@@ -164,6 +167,59 @@ body {
     max-width: 8rem;
     border-radius: 50%;
     margin-block: 1rem;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid: repeat(2, 30rem) / auto-flow 30rem;
+
+  & > * {
+    margin-inline: 2rem;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
+  backdrop-filter: blur(8px);
+  margin-block: 2rem;
+  border-radius: 30px;
+  max-width: 40rem;
+
+  p {
+    margin-inline: 2rem;
+  }
+
+  & * {
+    margin-block: .5rem;
+  }
+}
+
+.card-btn {
+  background: $clr-accent-100;
+	color: $clr-neutral-200;
+	border: none;
+  border-radius: 10px;
+  padding: .5rem 2rem;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  &:hover {
+    background: linear-gradient(100deg, $clr-accent-200, $clr-accent-100);
+    --underline-width: 100%;
+    transition: background 300ms;
+  }
+
+  span {
+    background: linear-gradient($clr-neutral-400 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    padding-left: 7px;
+    transition: background-size 0.5s;
   }
 }
 
@@ -313,6 +369,14 @@ body {
     font-size: 5rem;
   }
 
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
   .navbar-show,
   .navbar-close {
     display: none;
@@ -337,7 +401,7 @@ body {
     padding-block: 1rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     transition: 850ms;
     z-index: 9999;
 
