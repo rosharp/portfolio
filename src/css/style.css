@@ -196,13 +196,12 @@ body {
   transition: 200ms;
 }
 
-.active {
-  position: fixed;
-  top: 2rem;
-  transition: 200ms;
-}
-
 @media (max-width: 1000px) {
+  .active {
+    position: fixed;
+    top: 2rem;
+    transition: 200ms;
+  }
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -294,6 +293,9 @@ body {
 .navbar-close {
     display: none;
   }
+  .link-active {
+    color: red;
+  }
   .nav-menu {
     left: 35%;
     right: 35%;
@@ -303,13 +305,15 @@ body {
     list-style: none;
   }
   .nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-inline: 35%;
     background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
     backdrop-filter: blur(8px);
     padding-block: 1rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
     border-radius: 25px;
-    position: fixed;
     transition: 850ms;
     z-index: 9999;
   }

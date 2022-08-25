@@ -16,9 +16,9 @@ const Layout = () => {
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) { 
+      if (window.scrollY > lastScrollY) {
         setShow(false);
-      } else { 
+      } else {
         setShow(true);
       }
 
@@ -72,7 +72,11 @@ const Layout = () => {
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.className}>
-                <Link to={item.path} onClick={showSidebar}>
+                <Link
+                  smooth
+                  to={item.path}
+                  onClick={showSidebar}
+                >
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>

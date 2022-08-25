@@ -232,14 +232,15 @@ body {
   transition: 200ms;
 }
 
-.active {
+
+@media(max-width: 1000px) {
+
+  .active {
   position: fixed;
   top: 2rem;
   transition: 200ms;
 }
 
-
-@media(max-width: 1000px) {
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -354,6 +355,10 @@ body {
     display: none;
   }
 
+  .link-active {
+    color: red;
+  }
+
   .nav-menu {
     left: 35%;
     right: 35%;
@@ -365,13 +370,15 @@ body {
   }
 
   .nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-inline: 35%;
     background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
     backdrop-filter: blur(8px);
     padding-block: 1rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
     border-radius: 25px;
-    position: fixed;
     transition: 850ms;
     z-index: 9999;
 
