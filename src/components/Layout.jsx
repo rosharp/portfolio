@@ -16,13 +16,12 @@ const Layout = () => {
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      if (window.scrollY > lastScrollY) { 
         setShow(false);
-      } else { // if scroll up show the navbar
+      } else { 
         setShow(true);
       }
 
-      // remember current page location to use in the next move
       setLastScrollY(window.scrollY);
     }
   };
@@ -31,12 +30,11 @@ const Layout = () => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
 
-      // cleanup function
       return () => {
         window.removeEventListener('scroll', controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  });
 
   useEffect(() => {
     const closeSidebar = (e) => {
@@ -67,7 +65,7 @@ const Layout = () => {
         <ul className="nav-links">
           <li className="navbar-toggle">
             <Link className="menu-bars" to={window.location} onClick={showSidebar}>
-              <AiIcons.AiOutlineClose />
+              <AiIcons.AiOutlineClose className="navbar-close" />
             </Link>
           </li>
 

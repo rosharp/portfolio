@@ -190,17 +190,19 @@ body {
   margin-bottom: 1rem;
 }
 
+.hidden {
+  position: fixed;
+  top: -5rem;
+  transition: 200ms;
+}
+
+.active {
+  position: fixed;
+  top: 2rem;
+  transition: 200ms;
+}
+
 @media (max-width: 1000px) {
-  .hidden {
-    position: fixed;
-    top: -5rem;
-    transition: 300ms ease-in-out;
-  }
-  .active {
-    position: fixed;
-    top: 2rem;
-    transition: 200ms;
-  }
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -208,7 +210,7 @@ body {
     color: #ebcda2;
   }
   .nav-menu {
-    background-color: #04293A;
+    background-color: #04293a;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -252,7 +254,7 @@ body {
     width: 100%;
   }
   .navbar-toggle {
-    background-color: #04293A;
+    background-color: #04293a;
     width: 100%;
     height: 80px;
     display: flex;
@@ -264,7 +266,7 @@ body {
     transition: 200ms;
   }
   .header-home {
-    margin-top: 20vh;
+    padding-top: 20vh;
   }
   .header-home .header-btn-container {
     margin-top: 5rem;
@@ -285,6 +287,45 @@ body {
   }
   .footer-btn-container {
     margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .navbar-show,
+.navbar-close {
+    display: none;
+  }
+  .nav-menu {
+    left: 35%;
+    right: 35%;
+  }
+  nav > * {
+    display: flex;
+    list-style: none;
+  }
+  .nav-menu {
+    background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
+    backdrop-filter: blur(8px);
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 25px;
+    position: fixed;
+    transition: 850ms;
+    z-index: 9999;
+  }
+  .nav-menu li {
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    background: linear-gradient(#ECB365 0 0) bottom left/var(--underline-width, 0%) 0.1em no-repeat;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-size 0.5s;
+  }
+  .nav-menu li:hover {
+    --underline-width: 100%;
+  }
+  .nav-menu li span {
+    margin-left: 8px;
   }
 }
 

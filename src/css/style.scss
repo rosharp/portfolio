@@ -5,12 +5,14 @@ sans-serif;
 
 $clr-neutral-100: hsl(195, 31%, 75%);
 $clr-neutral-200: #064663;
-$clr-neutral-300: #04293A;
+$clr-neutral-300: #04293a;
 $clr-neutral-400: #041C32;
 
 $clr-accent-100: #ECB365;
 $clr-accent-200: #ebcda2;
 
+$clr-neutral-300-trsp: rgb(4, 41, 58, .75);
+$clr-neutral-200-trsp: rgb(6, 70, 99, .75);
 
 *,
 *::before,
@@ -137,18 +139,18 @@ a {
   position: relative;
   margin-top: 5rem;
   margin-bottom: 5rem;
-	height: 1px;
+  height: 1px;
 }
 
 .div-transparent:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0%;
-	right: 0%;
-	width: 100%;
-	height: 1.5px;
-	background-image: linear-gradient(to right, transparent, $clr-accent-100, transparent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  height: 1.5px;
+  background-image: linear-gradient(to right, transparent, $clr-accent-100, transparent);
 }
 
 body {
@@ -224,19 +226,20 @@ body {
   }
 }
 
+.hidden {
+  position: fixed;
+  top: -5rem;
+  transition: 200ms;
+}
+
+.active {
+  position: fixed;
+  top: 2rem;
+  transition: 200ms;
+}
+
+
 @media(max-width: 1000px) {
-  .hidden {
-    position: fixed;
-    top: -5rem;
-    transition: 200ms;
-  }
-
-  .active {
-    position: fixed;
-    top: 2rem;
-    transition: 200ms;
-  }
-
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -341,5 +344,54 @@ body {
 
   .footer-btn-container {
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .navbar-show,
+  .navbar-close {
+    display: none;
+  }
+
+  .nav-menu {
+    left: 35%;
+    right: 35%;
+  }
+
+  nav>* {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-menu {
+    background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
+    backdrop-filter: blur(8px);
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 25px;
+    position: fixed;
+    transition: 850ms;
+    z-index: 9999;
+
+
+    li {
+      margin-inline-start: 1rem;
+      margin-inline-end: 1rem;
+      background: linear-gradient($clr-accent-100 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-size 0.5s;
+
+      &:hover {
+        --underline-width: 100%;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+
   }
 }
