@@ -170,14 +170,7 @@ body {
   }
 }
 
-.cards-container {
-  display: grid;
-  grid: repeat(2, 30rem) / auto-flow 30rem;
 
-  & > * {
-    margin-inline: 2rem;
-  }
-}
 
 .card {
   display: flex;
@@ -188,19 +181,33 @@ body {
   background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
   backdrop-filter: blur(8px);
   margin-block: 2rem;
+  padding-top: 24rem;
+  padding-bottom: 2rem;
   border-radius: 30px;
-  max-width: 40rem;
+  max-width: 40rem; 
 
-  p {
-    margin-inline: 2rem;
+  img {
+    top: 0;
   }
 
-  & * {
-    margin-block: .5rem;
+  h3 {
+    top: 13rem;
+  }
+
+  p {
+    top: 17rem;
+    margin-inline: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  & > * {
+    position: fixed;
   }
 }
 
 .card-btn {
+  position: fixed;
+  top: 21rem;
   background: $clr-accent-100;
 	color: $clr-neutral-200;
 	border: none;
@@ -434,5 +441,11 @@ body {
         font-size: 2.5rem;
       }
     }
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 25rem);
+    gap: 2rem;
   }
 }

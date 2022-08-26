@@ -5,28 +5,28 @@ import RatingRound from "../images/interactive rating component/interactive-rati
 
 export const CardsData = [
     {
-        image: SpaceRound, 
+        image: SpaceRound,
         title: "Space",
-        text: "A fully-responsive multipage space tourism website in vanilla JS, HTML and CSS.",
+        text: "A fully-responsive multipage space tourism website.",
         linkUrl: "space",
         className: "card",
     },
     {
-        image: ShopitRound, 
+        image: ShopitRound,
         title: "Shopit",
         text: "Functional E-commerce website in MERN stack.",
         linkUrl: "shopit",
         className: "card",
     },
     {
-        image: IntroRound, 
+        image: IntroRound,
         title: "Intro",
         text: "Responsive intro section with dropdown navigation in React and SCSS.",
         linkUrl: "intro",
         className: "card",
     },
     {
-        image: RatingRound, 
+        image: RatingRound,
         title: "Rating",
         text: "Rating component in React and SCSS.",
         linkUrl: "rating",
