@@ -130,16 +130,17 @@ body {
   background: $clr-neutral-400;
 }
 
-.header-btn {
+.link-btn {
   background: none;
   color: $clr-neutral-200;
   border: none;
   padding: 0;
   margin: 0;
+  margin-inline: clamp(.75rem, 1vh, 3rem);
   cursor: pointer;
   transition: 200ms;
 
-  .header-icon {
+  .link-icon {
     font-size: 2rem;
   }
 
@@ -148,7 +149,6 @@ body {
     transition: 200ms;
   }
 }
-
 
 .header-home {
 
@@ -168,9 +168,11 @@ body {
     border-radius: 50%;
     margin-block: 1rem;
   }
+
+  .link-btn-container {
+    margin-top: 1rem;
+  }
 }
-
-
 
 .card {
   display: flex;
@@ -180,7 +182,6 @@ body {
   flex-direction: column;
   background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
   backdrop-filter: blur(8px);
-  margin-block: 2rem;
   padding-top: 24rem;
   padding-bottom: 2rem;
   border-radius: 30px;
@@ -285,6 +286,7 @@ body {
 
   .nav-menu.active {
     left: 0;
+    margin-inline: 0;
     transition: 350ms;
   }
 
@@ -337,12 +339,7 @@ body {
 
   .header-home {
     padding-top: 20vh;
-
-    .header-btn-container {
-      margin-top: 5rem;
-    }
   }
-
 
   .avatar-img {
     padding-top: .5rem;
@@ -355,18 +352,10 @@ body {
     }
   }
 
-  .header-btn {
-    margin-inline: clamp(.75rem, 2vh, 4rem);
-  }
-
   .projects {
     display: grid;
     justify-content: center;
     grid: repeat(2, 12rem) / auto-flow 11rem;
-  }
-
-  .footer-btn-container {
-    margin-bottom: 2rem;
   }
 }
 
@@ -390,19 +379,10 @@ body {
   }
 
   .nav-menu {
-    left: 35%;
-    right: 35%;
-  }
-
-  nav>* {
     display: flex;
     list-style: none;
-  }
-
-  .nav-menu {
-    display: flex;
     justify-content: center;
-    margin-inline: 35%;
+    margin-inline: clamp(10%, 33%, 40%);
     background: linear-gradient(100deg, $clr-neutral-200-trsp, $clr-neutral-300-trsp);
     backdrop-filter: blur(8px);
     padding-block: 1rem;
@@ -414,10 +394,9 @@ body {
 
 
     li {
-      margin-inline-start: 1rem;
-      margin-inline-end: 1rem;
+      margin-inline-end: 2rem;
       background: linear-gradient($clr-accent-100 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-      display: inline-block;
+      display: inline;
       text-decoration: none;
       transition: background-size 0.5s;
 
@@ -434,8 +413,7 @@ body {
   .header-home {
     margin-top: 4rem;
 
-    .header-btn {
-      margin-inline: clamp(.75rem, 1vh, 3rem);
+    .link-btn {
 
       & * {
         font-size: 2.5rem;
@@ -445,7 +423,15 @@ body {
 
   .cards-container {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(2, 25rem);
     gap: 2rem;
+    margin-block: 2rem;
+  }
+}
+
+@media(max-width: 1600px) {
+  .nav-menu {
+    margin-inline: clamp(10%, 20%, 25%);
   }
 }
