@@ -1,9 +1,6 @@
 import React, { useLayoutEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import Slider from "./Slider";
 
 import SpaceMain from "../images/space/Space.png";
 import SpaceMainMobile from "../images/space/Space-mobile.png";
@@ -43,41 +40,9 @@ export default function App() {
     >
       <h1>Space</h1>
       <p>Fully Responsive Space Tourism Website</p>
-      <Swiper
-        navigation={true}
-        autoHeight={true}
-        modules={[Navigation]}
-        className="mySwiper"
-        slidesPerView="auto"
-      // breakpoints={{
-      //   // when window width is >= 640px
-      //   640: {
-      //     width: 640,
-      //     slidesPerView: 1,
-      //   },
-      //   // when window width is >= 768px
-      //   768: {
-      //     width: 768,
-      //     slidesPerView: 2,
-      //   },
-      // }}
-      >
-        {
-          ImagesDesktop.map((item, index) => {
-            return (
-              <SwiperSlide className="desktop-slide" index={index}><img src={item} alt="project" /></SwiperSlide>
-            )
-          })
-        }
 
-        {
-          ImagesMobile.map((item, index) => {
-            return (
-              <SwiperSlide className="mobile-slide" index={index}><img src={item} alt="project" /></SwiperSlide>
-            )
-          })
-        }
-      </Swiper>
+      <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
+
     </motion.div>
   );
 }

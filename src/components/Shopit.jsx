@@ -1,10 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
-
+import Slider from "./Slider";
 
 import ShopitMain from "../images/shopIT/shopit-main.png";
 import ShopitProduct from "../images/shopIT/shopit-product.png";
@@ -19,7 +15,7 @@ import ShopitOrders from "../images/shopIT/shopit-orders.png";
 import ShopitOrderInfo from "../images/shopIT/shopit-order-info.png";
 
 
-const Images = [
+const ImagesDesktop = [
   ShopitMain,
   ShopitProduct,
   ShopitSearch,
@@ -32,6 +28,8 @@ const Images = [
   ShopitOrders,
   ShopitOrderInfo,
 ];
+
+const ImagesMobile = [];
 
 export default function App() {
   useLayoutEffect(() => {
@@ -46,15 +44,9 @@ export default function App() {
     >
       <h1>Shopit</h1>
       <p>Ecommerce website in MERN</p>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        {
-          Images.map((item, index) => {
-            return (
-              <SwiperSlide index={index}><img src={item} alt="project" /></SwiperSlide>
-            )
-          })
-        }
-      </Swiper>
+
+      <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
+
       <p>While making this project I learnt about:</p>
       <ul>
         <li>Setting Up Environment</li>

@@ -1,20 +1,18 @@
 import React, { useLayoutEffect } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "./Slider";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-
-// import required modules
-import { Navigation } from "swiper";
-
+import IntroDesktop from "../images/intro section/intro-desktop.png";
+import IntroDesktopToggled from "../images/intro section/intro-desktop-toggled.png";
 import IntroMobile from "../images/intro section/intro-mobile.png";
 import IntroMobileNav from "../images/intro section/intro-mobile-nav.png";
 import IntroNavToggled from "../images/intro section/intro-nav-toggled.png";
 
-const Images = [
-  IntroNavToggled,
+const ImagesDesktop = [
+  IntroDesktop,
+  IntroDesktopToggled,
+];
+
+const ImagesMobile = [
   IntroMobile,
   IntroMobileNav,
 ];
@@ -28,15 +26,8 @@ export default function App() {
     <>
       <h1>Intro</h1>
       <p>Intro Section with Dropdown Navigation</p>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        {
-          Images.map((item, index) => {
-            return (
-              <SwiperSlide index={index}><img src={item} alt="project" /></SwiperSlide>
-            )
-          })
-        }
-      </Swiper>
+
+      <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
     </>
   );
 }
