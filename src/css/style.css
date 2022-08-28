@@ -199,6 +199,20 @@ body {
   transition: background-size 0.5s;
 }
 
+.swiper-wrapper {
+  width: 480px;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.mobile-slide {
+  max-height: 40rem;
+  max-width: 20rem;
+  object-fit: contain;
+}
+
 .footer {
   display: grid;
   justify-content: center;
