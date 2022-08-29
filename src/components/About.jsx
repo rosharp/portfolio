@@ -1,10 +1,16 @@
 import React from "react";
 import Divider from "./Divider";
+import { motion } from "framer-motion";
+import textAnimationX from "./animations/textAnimationX";
 
 const About = () => {
   return (
-    <div id="about">
-      <h1>About</h1>
+    <motion.div
+      id="about"
+      initial="hidden"
+      whileInView="visible"
+    >
+      <motion.h1 custom={1} variants={textAnimationX}>About</motion.h1>
       <p>
         What can a “full-stack web developer” do, you ask?
 
@@ -19,7 +25,7 @@ const About = () => {
         A full-stack developer knows no bounds. And when they find one they cross it without hesitation, boldly going into the unknown to return richer for it.
       </p>
       <Divider />
-    </div>
+    </motion.div>
   );
 }
 

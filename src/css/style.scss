@@ -284,6 +284,22 @@ body {
 
 @media(max-width: 1000px) {
 
+  .App {
+    padding-inline: clamp(.5rem, 3vh, 2rem);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
   .active {
     position: fixed;
     top: 2rem;
@@ -295,6 +311,7 @@ body {
     font-size: 2rem;
     background: none;
     color: $clr-accent-200;
+    z-index: 9999;
   }
 
   .nav-menu {
@@ -314,6 +331,7 @@ body {
     left: 0;
     margin-inline: 0;
     transition: 350ms;
+    z-index: 9999;
   }
 
   .nav-text {
@@ -382,6 +400,56 @@ body {
     display: grid;
     justify-content: center;
     grid: repeat(2, 12rem) / auto-flow 11rem;
+  }
+
+  .project-page {
+    h1 {
+      padding-top: 6rem;
+    }
+  }
+
+  .cards-container > * {
+    margin-block: 1rem;
+  }
+
+  .card {
+    padding-top: 24rem;
+    padding-bottom: 2rem;
+    border-radius: 30px;
+    max-width: 40rem; 
+
+    img {
+      top: -.5rem;
+    }
+
+    h3 {
+      top: 12rem;
+    }
+
+    p {
+      top: 15rem;
+      margin-inline: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    & > * {
+      position: fixed;
+    }
+  }
+
+  // .swiper-wrapper {
+  //   width: 50rem;
+  // }
+
+  .swiper-slide {
+    height: auto;
+    width: 100%;
+  }
+
+  .mobile-slide {
+    max-height: 40rem;
+    max-width: 20rem;
+    object-fit: contain;
   }
 }
 

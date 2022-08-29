@@ -22,6 +22,7 @@ export default function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className="project-page"
     >
       <h1>Rating</h1>
       <p>Interactive Rating Component</p>

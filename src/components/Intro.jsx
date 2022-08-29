@@ -15,6 +15,7 @@ const ImagesDesktop = [
 const ImagesMobile = [
   IntroMobile,
   IntroMobileNav,
+  IntroNavToggled,
 ];
 
 export default function App() {
@@ -23,11 +24,11 @@ export default function App() {
   });
 
   return (
-    <>
+    <div className="project-page">
       <h1>Intro</h1>
       <p>Intro Section with Dropdown Navigation</p>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
-    </>
+    </div>
   );
 }
