@@ -301,7 +301,7 @@ body {
   }
 
   .active {
-    position: fixed;
+    position: absolute;
     top: 2rem;
     transition: 200ms;
   }
@@ -339,6 +339,7 @@ body {
     justify-content: start;
     align-items: center;
     padding: 8px 0px 8px 16px;
+    
     list-style: none;
     height: 60px;
     margin-bottom: 1rem;
@@ -354,7 +355,8 @@ body {
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 16px;
+      padding: 30px 30px;
+      padding-right: 2rem;
       border-radius: 4px;
 
       &:hover {

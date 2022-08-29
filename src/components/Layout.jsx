@@ -55,16 +55,16 @@ const Layout = () => {
   }, [])
 
   return (
-    <>
+    <div>
       <div className="navbar">
-        <Link className={show ? "menu-bars active" : "menu-bars hidden"} to={window.location} onClick={showSidebar}>
+        <Link className="menu-bars active" to="#" onClick={showSidebar}>
           <FaIcons.FaBars className="navbar-show" />
         </Link>
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-links">
           <li className="navbar-toggle">
-            <Link className="menu-bars" to={window.location} onClick={showSidebar}>
+            <Link className="menu-bars" to="#" onClick={showSidebar}>
               <AiIcons.AiOutlineClose className="navbar-close" />
             </Link>
           </li>
@@ -92,7 +92,7 @@ const Layout = () => {
 
 
       <Footer />
-    </>
+    </div>
   );
 };
 
