@@ -60,11 +60,36 @@ const Content = [
         name: "Vitaly Bekshnev",
         speciality: "Frontend Developer",
         title: "Resume",
+        about: "Hi, my name is Vitaly and I'm passionate about React and frontend. I genuinely love to learn and care about writing clean code. I'm currently looking for and environment that will help me progress into a full-stack role.",
         text: [
             {
                 id: 0,
-                title: "Employment",
-                content: "",
+                title: "Work Experience",
+                content: [
+                    {
+                        title: "Web Development Experience",
+                        content: [
+                            { id: 0, content: "Built a fully functional MERN stack e-commerce website with a dashboard" },
+                            { id: 1, content: "Developed backend with Node.js and Express for 3 mid-sized websites" },
+                            { id: 2, content: "Created many small and mid-sized responsive HTML, SASS/CSS and JS projects" },
+                        ],
+                    },
+                    {
+                        title: "Translator (English-Japanese-Russian)",
+                        content: [
+                            { id: 0, content: "Audio-visual content from English and Japanese to Russian" },
+                            { id: 1, content: "Tourism related financial documents and brochures targeting Japanese audience" },
+                            { id: 2, content: "Japanese dishes description and names from Russian to Japanese and English" },
+                        ]
+                    },
+                    {
+                        title: "Language Teaching Business",
+                        content: [
+                            { id: 0, content: "Learnt how to design an effective curriculum and manage customers" },
+                            { id: 1, content: "Acquired customers through social media" },
+                        ]
+                    }
+                ],
             },
 
             {
@@ -74,12 +99,12 @@ const Content = [
                     {
                         id: 0,
                         title: "Development",
-                        content: "",
+                        content: "HTML, CSS, SASS, JavaScript, React, Node.js, Express, MongoDB",
                     },
                     {
                         id: 1,
                         title: "Translation",
-                        content: "",
+                        content: "Audio-visual, script, website and financial translation. JLPT certified.",
                     },
                 ],
             },
@@ -87,7 +112,13 @@ const Content = [
             {
                 id: 2,
                 title: "Education",
-                content: "",
+                content: [
+                    {
+                        university: "Far Eastern Federal University",
+                        bachelor: "Bachelor of Oriental Studies (Japanese)",
+                        year: "2018-2022",
+                    },
+                ],
             },
         ],
     },
