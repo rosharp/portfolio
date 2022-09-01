@@ -235,6 +235,45 @@ body {
   transition: 200ms;
 }
 
+.resume {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  align-items: center;
+  padding-bottom: 7vw;
+}
+.resume h1,
+.resume h2,
+.resume h3 {
+  text-align: center;
+  margin-block: 0;
+  padding-block: 0;
+}
+.resume h2 {
+  margin-block: 1.5rem;
+  font-size: 2.5rem;
+}
+.resume h3 {
+  font-size: 1.25rem;
+  margin-block: 0.7rem;
+}
+.resume .divider, .resume .wrapper {
+  margin-block: 0;
+  padding: 0rem;
+}
+.resume .divider {
+  max-width: 20rem;
+  align-self: center;
+  margin-inline: auto;
+}
+.resume .wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.resume .education {
+  text-align: center;
+}
+
 @media (max-width: 1000px) {
   .App {
     padding-inline: clamp(0.5rem, 3vh, 2rem);
@@ -368,6 +407,9 @@ body {
     max-width: 20rem;
     object-fit: contain;
   }
+  .resume h1 {
+    margin-top: 8rem;
+  }
 }
 @media (min-width: 1000px) {
   h1 {
@@ -422,6 +464,9 @@ body {
     grid-template-columns: repeat(2, 25rem);
     gap: 2rem;
     margin-block: 2rem;
+  }
+  .resume li {
+    margin-left: 3rem;
   }
 }
 @media (max-width: 1600px) {

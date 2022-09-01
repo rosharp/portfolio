@@ -21,7 +21,7 @@ const Header = () => {
         <motion.p custom={2} variants={textAnimationY}>Translator</motion.p>
       </div>
 
-      <img className="avatar-img" src={Avatar} alt="avatar" />
+      <motion.img className="avatar-img" src={Avatar} alt="avatar" custom={3} variants={textAnimationY} />
 
       <br />
 

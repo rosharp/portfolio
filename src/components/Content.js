@@ -115,7 +115,7 @@ const Content = [
                 content: [
                     {
                         university: "Far Eastern Federal University",
-                        bachelor: "Bachelor of Oriental Studies (Japanese)",
+                        bachelor: "Bachelor of Oriental Studies in Japanese History",
                         year: "2018-2022",
                     },
                 ],
