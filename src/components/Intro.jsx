@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import Slider from "./Slider";
+import Content from "./Content";
 
 import IntroDesktop from "../images/intro section/intro-desktop.png";
 import IntroDesktopToggled from "../images/intro section/intro-desktop-toggled.png";
@@ -25,10 +26,12 @@ export default function App() {
 
   return (
     <div className="project-page">
-      <h1>Intro</h1>
-      <p>Intro Section with Dropdown Navigation</p>
+      <h1>{Content[4].title}</h1>
+      <p>{Content[4].subtitle}</p>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
+
+      <p>{Content[4].text}</p>
     </div>
   );
 }

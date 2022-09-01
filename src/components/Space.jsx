@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import Slider from "./Slider";
+import Content from "./Content";
 
 import SpaceMain from "../images/space/Space.png";
 import SpaceMainMobile from "../images/space/Space-mobile.png";
@@ -39,10 +40,12 @@ export default function App() {
       exit={{ opacity: 0 }}
       className="project-page"
     >
-      <h1>Space</h1>
-      <p>Fully Responsive Space Tourism Website</p>
+      <h1>{Content[2].title}</h1>
+      <p>{Content[2].subtitle}</p>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
+
+      <p>{Content[2].text}</p>
 
     </motion.div>
   );

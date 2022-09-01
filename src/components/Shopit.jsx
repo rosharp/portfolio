@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import Slider from "./Slider";
+import Content from "./Content";
 
 import ShopitMain from "../images/shopIT/shopit-main.png";
 import ShopitProduct from "../images/shopIT/shopit-product.png";
@@ -43,32 +44,20 @@ export default function App() {
       exit={{ opacity: 0 }}
       className="project-page"
     >
-      <h1>Shopit</h1>
-      <p>Ecommerce website in MERN</p>
+      <h1>{Content[3].title}</h1>
+      <p>{Content[3].subtitle}</p>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
 
-      <p>While making this project I learnt about:</p>
+      <p>{Content[3].text}</p>
       <ul>
-        <li>Setting Up Environment</li>
-        <li>Starting with ShopIT Backend</li>
-        <li>Adding Products Resource</li>
-        <li>Backend Error Handling</li>
-        <li>Adding Filter, Pagination, Search</li>
-        <li>Authentication & Authorization</li>
-        <li>User Routes</li>
-        <li>Adding Orders Resource</li>
-        <li>User Reviews</li>
-        <li>Starting with ShopIT Frontend</li>
-        <li>Implementing Redux</li>
-        <li>Adding Pagination, Search & Filters</li>
-        <li>Users & Authentication Frontend</li>
-        <li>Adding Shopping Cart</li>
-        <li>Handle Checkout & Payments</li>
-        <li>User Orders & Reviews</li>
-        <li>Admin Routes</li>
-        <li>Deployment</li>
-        <li>Your Task / Assignment</li>
+        {
+          Content[3].featuresList.map((item, index) => {
+            return (
+              <li index={item.id}>{item.content}</li>
+            )
+          })
+        }
       </ul>
     </motion.div>
   );
