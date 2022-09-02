@@ -21,7 +21,7 @@ export const CardsData = [
     {
         image: IntroRound,
         title: "Intro",
-        text: "Responsive intro section with dropdown navigation in React and SCSS.",
+        text: "Intro section with dropdown navigation in React and SCSS.",
         linkUrl: "intro",
         className: "card",
     },

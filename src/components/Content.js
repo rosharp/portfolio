@@ -9,21 +9,21 @@ const Content = [
         title: "About",
         text: [
             {
-                id: 0, content: 'What can a "front-end developer" do? I create websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.',
+                id: 0, content: 'What can a "frontend developer" do? I create websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.',
             },
             {
-                id: 1, content: 'A front end developer has one general responsibility: to ensure that website visitors can easily interact with the page. They do this through the combination of design, technology and programming to code a website’s appearance, as well as taking care of debugging. So, if you hire me, this is what I can do:',
+                id: 1, content: 'A frontend developer has one general responsibility: to ensure that website visitors can easily interact with the page. They do this through the combination of design, technology and programming to code a website’s appearance, as well as taking care of debugging. So, if you hire me, this is what I can do:',
             },
             {
                 id: 2, content: [
-                    { id: 0, content: "Optimizing the user experience." },
-                    { id: 1, content: "Using HTML, JavaScript and CSS to bring concepts to life." },
+                    { id: 0, content: "Optimizing the user experience" },
+                    { id: 1, content: "Using HTML, JavaScript and CSS to bring concepts to life" },
                     { id: 2, content: "Developing and maintaining the user interface" },
-                    { id: 3, content: "Implementing design on mobile websites." },
-                    { id: 4, content: "Creating tools that improve site interaction regardless of the browser." },
-                    { id: 5, content: "Managing software workflow." },
-                    { id: 6, content: "Following SEO best practices." },
-                    { id: 7, content: "Fixing bugs and testing for usability." },
+                    { id: 3, content: "Implementing design on mobile websites" },
+                    { id: 4, content: "Creating tools that improve site interaction regardless of the browser" },
+                    { id: 5, content: "Managing software workflow" },
+                    { id: 6, content: "Following SEO best practices" },
+                    { id: 7, content: "Fixing bugs and testing for usability" },
                 ]
             },
         ],

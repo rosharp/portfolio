@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 import Slider from "./Slider";
 import Content from "./Content";
 
@@ -25,9 +26,16 @@ export default function App() {
   });
 
   return (
-    <div className="project-page">
-      <h1>{Content[4].title}</h1>
-      <p>{Content[4].subtitle}</p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="project-page"
+    >
+      <div className="project-header">
+        <h1>{Content[4].title}</h1>
+        <p>{Content[4].subtitle}</p>
+      </div>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
 
@@ -40,6 +48,6 @@ export default function App() {
           )
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 }

@@ -17,6 +17,30 @@ $clr-neutral-200-trsp: rgb(6, 70, 99, .75);
 $clr-accent-100-trsp: rgb(236, 179, 101, .75);
 $clr-accent-200-trsp: rgb(235, 205, 162, .75);
 
+::-webkit-scrollbar {
+   width: 9px;
+}
+
+::-webkit-scrollbar-button {
+    width: 9px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $clr-neutral-400;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $clr-neutral-300;
+    width: 8px;
+}
+
+:root {
+    overflow-y: scroll;
+    scrollbar-color: $clr-neutral-300 $clr-neutral-400;
+    scrollbar-width: thin; 
+}
+
 
 *,
 *::before,
@@ -235,18 +259,6 @@ body {
   width: 480px;
 }
 
-// @media screen and (min-width: 640px) {
-//   .swiper-wrapper {
-//     width: 640px;
-//   }
-// }
-
-// @media screen and (min-width: 768px) {
-//   .swiper-wrapper {
-//     width: 768px;
-//   }
-// }
-
 .swiper-slide {
   height: auto;
 }
@@ -257,29 +269,43 @@ body {
   object-fit: contain;
 }
 
-.footer {
-  display: grid;
-  justify-content: center;
-
-  p {
-    margin-bottom: 2rem;
-    justify-self: center;
-    color: $clr-neutral-200;
-  }
-
-  img {
-    object-fit: contain;
-    justify-self: center;
-    max-width: 3rem;
-    margin-bottom: 1rem;
-  }
-}
-
 .hidden {
   position: fixed;
   top: -5rem;
   transition: 200ms;
 }
+
+  .project-page {
+    p {
+      padding-block: .2rem;
+    }
+
+    h1 {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      text-align: center;
+      align-items: center;
+      margin-inline: auto;
+      padding-block: 1rem;
+      p {
+        color: $clr-accent-200;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .swiper {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .content, .project-page {
+    li {
+      margin-inline-start: 1rem;
+    }
+  }
 
 .resume {
   display: flex;
@@ -295,7 +321,6 @@ body {
     margin-block: 0;
     padding-block: 0;
   } 
-
 
   h2 {
     margin-block: 1.5rem;
@@ -325,6 +350,26 @@ body {
 
   .education {
     text-align: center;
+  }
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+
+  p {
+    margin-bottom: 2rem;
+    justify-self: center;
+    color: $clr-neutral-200;
+  }
+
+  img {
+    object-fit: contain;
+    justify-self: center;
+    max-width: 3rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -358,7 +403,7 @@ body {
     font-size: 2rem;
     background: none;
     color: $clr-accent-200;
-    z-index: 9999;
+    z-index: 9990;
   }
 
   .nav-menu {
@@ -452,33 +497,41 @@ body {
   }
 
   .project-page {
-    h1 {
-      padding-top: 6rem;
+    .project-header {
+      padding-block-start: 16vh;
     }
   }
+
 
   .cards-container > * {
     margin-block: 1rem;
   }
 
   .card {
-    padding-top: 24rem;
-    padding-bottom: 2rem;
+    padding-top: 20rem;
+    margin-block: 2.5rem;
     border-radius: 30px;
-    max-width: 40rem; 
+    max-width: 22rem; 
+    align-self: center;
+    margin-inline: auto;
+
 
     img {
-      top: -.5rem;
+      top: -.8rem;
+      width: 8rem;
     }
 
     h3 {
-      top: 12rem;
+      top: 10rem;
     }
 
     p {
-      top: 15rem;
+      top: 13rem;
       margin-inline: 2rem;
-      margin-bottom: 3.5rem;
+    }
+
+    .card-btn {
+      top: 18rem;
     }
 
     & > * {

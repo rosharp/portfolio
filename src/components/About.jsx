@@ -10,6 +10,7 @@ const About = () => {
       id="about"
       initial="hidden"
       whileInView="visible"
+      className="content"
     >
       <motion.h1 custom={1} variants={textAnimationX}>{Content[1].title}</motion.h1>
       <p>{Content[1].text[0].content}</p>

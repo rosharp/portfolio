@@ -44,8 +44,10 @@ export default function App() {
       exit={{ opacity: 0 }}
       className="project-page"
     >
-      <h1>{Content[3].title}</h1>
-      <p>{Content[3].subtitle}</p>
+      <div className="project-header">
+        <h1>{Content[3].title}</h1>
+        <p>{Content[3].subtitle}</p>
+      </div>
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
 
