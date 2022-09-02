@@ -71,7 +71,7 @@ const Resume = () => {
         </div>
 
 
-        <div
+        <motion.div
           className="education"
           initial="hidden"
           whileInView="visible"
@@ -80,7 +80,7 @@ const Resume = () => {
           <p>{Content[6].text[2].content[0].university}</p>
           <p>{Content[6].text[2].content[0].bachelor}</p>
           <p>{Content[6].text[2].content[0].year}</p>
-        </div>
+        </motion.div>
         <Divider />
       </motion.div>
     </motion.div>

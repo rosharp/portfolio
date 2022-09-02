@@ -32,12 +32,28 @@ const Content = [
         id: 2,
         title: "Space",
         subtitle: "Fully Responsive Space Tourism Website",
-        text: "Project description."
+        text: [
+            {
+                id: 0, content: "A website of a space tourism company in HTML, CSS and JS. Fully responsive and adapted for assistive technologies."
+            },
+            {
+                id: 1, content: "While making this project I learnt about:"
+            },
+            {
+                id: 2, content: [
+                    { id: 0, content: "Creating responsive desktop and mobile design" },
+                    { id: 1, content: "Building a precise design looking at a Figma file" },
+                    { id: 2, content: "Adapting HTML to assistive technologes" },
+                    { id: 3, content: "Using vanilla JavaScript to build functionality" },
+                    { id: 4, content: "Browser compatability of CSS properties" },
+                ],
+            },
+        ],
     },
     {
         id: 3,
         title: "Shopit",
-        subtitle: "Ecommerce website in MERN",
+        subtitle: "E-commerce website in MERN",
         text: "While making this project I learnt about:",
         featuresList: [
             { id: 0, content: "Setting Up Environment" },
@@ -65,14 +81,38 @@ const Content = [
     {
         id: 4,
         title: "Intro",
-        subtitle: "Intro Section with Dropdown NavigationS",
-        text: "Project description."
+        subtitle: "Intro Section with Dropdown Navigation",
+        text: [
+            {
+                id: 0, content: "Responsive intro section component with navbar and mobile sidebar with dropdowns. Written in React and Sass."
+            },
+            {
+                id: 1, content: "While making this project I learnt about:"
+            },
+            {
+                id: 2, content: [
+                    { id: 0, content: "Creating responsive navbar and sidebar with dropdowns in flexbox" },
+                    { id: 1, content: "Flexbox layout in general" },
+                    { id: 2, content: "State management in React" },
+                    { id: 3, content: "Sass basics" },
+                ],
+            },
+        ],
     },
     {
         id: 5,
         title: "Rating",
         subtitle: "Interactive Rating Component",
-        text: "Project description."
+        text: [
+            { id: 0, content: "Rating component in React and Sass. Works through state management." },
+            { id: 1, content: "What I learnt on this small project:" },
+            {
+                id: 2, content: [
+                    { id: 0, content: "React state management" },
+                    { id: 1, content: "How to work with flexbox" }
+                ]
+            },
+        ],
     },
     {
         id: 6,
@@ -90,7 +130,7 @@ const Content = [
                         content: [
                             { id: 0, content: "Built a fully functional MERN stack e-commerce website with a dashboard" },
                             { id: 1, content: "Developed backend with Node.js and Express for 3 mid-sized websites" },
-                            { id: 2, content: "Created many small and mid-sized responsive HTML, SASS/CSS and JS projects" },
+                            { id: 2, content: "Created many small and mid-sized responsive HTML, Sass/CSS and JS projects" },
                         ],
                     },
                     {
@@ -118,7 +158,7 @@ const Content = [
                     {
                         id: 0,
                         title: "Development",
-                        content: "HTML, CSS, SASS, JavaScript, React, Node.js, Express, MongoDB",
+                        content: "HTML, CSS, Sass, JavaScript, React, Node.js, Express, MongoDB",
                     },
                     {
                         id: 1,

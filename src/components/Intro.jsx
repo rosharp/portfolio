@@ -31,7 +31,15 @@ export default function App() {
 
       <Slider ImagesDesktop={ImagesDesktop} ImagesMobile={ImagesMobile} />
 
-      <p>{Content[4].text}</p>
+      <p>{Content[4].text[0].content}</p>
+      <p>{Content[4].text[1].content}</p>
+      <ul>
+        {Content[4].text[2].content.map((item) => {
+          return (
+            <li key={item.id}>{item.content}</li>
+          )
+        })}
+      </ul>
     </div>
   );
 }
