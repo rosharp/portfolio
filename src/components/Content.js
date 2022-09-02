@@ -7,7 +7,26 @@ const Content = [
     {
         id: 1,
         title: "About",
-        text: "What can a “full-stack web developer” do, you ask? I can conjur a website from nothing into existence, fully formed. I do not use tricks, nor is this magic. I specialize in manipulating the very fabric of the web, its raw materials of HTML, CSS, JavaScript, and SVG. Linux servers serve me, domains are my domain, and certificates are certain.         Open-source technologies empower this process. I am a custom WordPress theme and plugin development expert. I fully embraced the Gutenberg editor and can create custom blocks from scratch for any conceivable need. I have contributed in small ways to these and other open-source efforts and intend to give back every chance I get.         My art & design background informs ideation to design through to implementation. In 2010 I graduated from the Cleveland Institute of Art with a focus on digital arts and a mantra to always consider my audience. I will always advocate for the user of my interfaces; accessibility is not optional.         I can plan, design, build, launch, and maintain a website myself—did I mention that I build mobile apps too? I have worked on 10+ published cross-platform iOS and Android apps with React Native and Titanium SDK, roughly half of which I built and maintain solo.         A full-stack developer knows no bounds. And when they find one they cross it without hesitation, boldly going into the unknown to return richer for it."
+        text: [
+            {
+                id: 0, content: 'What can a "front-end developer" do? I create websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.',
+            },
+            {
+                id: 1, content: 'A front end developer has one general responsibility: to ensure that website visitors can easily interact with the page. They do this through the combination of design, technology and programming to code a website’s appearance, as well as taking care of debugging. So, if you hire me, this is what I can do:',
+            },
+            {
+                id: 2, content: [
+                    { id: 0, content: "Optimizing the user experience." },
+                    { id: 1, content: "Using HTML, JavaScript and CSS to bring concepts to life." },
+                    { id: 2, content: "Developing and maintaining the user interface" },
+                    { id: 3, content: "Implementing design on mobile websites." },
+                    { id: 4, content: "Creating tools that improve site interaction regardless of the browser." },
+                    { id: 5, content: "Managing software workflow." },
+                    { id: 6, content: "Following SEO best practices." },
+                    { id: 7, content: "Fixing bugs and testing for usability." },
+                ]
+            },
+        ],
     },
     {
         id: 2,

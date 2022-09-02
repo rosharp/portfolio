@@ -12,7 +12,15 @@ const About = () => {
       whileInView="visible"
     >
       <motion.h1 custom={1} variants={textAnimationX}>{Content[1].title}</motion.h1>
-      <p>{Content[1].text}</p>
+      <p>{Content[1].text[0].content}</p>
+      <p>{Content[1].text[1].content}</p>
+      <ul>
+        {Content[1].text[2].content.map((item) => {
+          return (
+            <li key={item.id}>{item.content}</li>
+          )
+        })}
+      </ul>
       <Divider />
     </motion.div>
   );
