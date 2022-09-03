@@ -74,9 +74,7 @@ a {
 
 .round-img {
   max-width: 10rem;
-  object-fit: contain;
   border-radius: 50%;
-  margin-block: 1.5rem;
 }
 
 .swiper {
@@ -180,29 +178,19 @@ body {
   flex-direction: column;
   background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
   backdrop-filter: blur(8px);
-  padding-top: 24rem;
-  padding-bottom: 2rem;
   border-radius: 30px;
-  max-width: 40rem;
-}
-.card img {
-  top: 0;
+  height: 23rem;
+  min-width: 20rem;
+  max-width: 30rem;
 }
 .card h3 {
-  top: 13rem;
+  line-height: 1;
 }
-.card p {
-  top: 17rem;
-  margin-inline: 2rem;
-  margin-bottom: 3.5rem;
-}
-.card > * {
-  position: fixed;
+.card img {
+  position: relative;
 }
 
 .card-btn {
-  position: fixed;
-  top: 21rem;
   background: #ECB365;
   color: #064663;
   border: none;
@@ -264,7 +252,8 @@ body {
   padding-bottom: 1rem;
 }
 
-.content li, .project-page li {
+.content li,
+.project-page li {
   margin-inline-start: 1rem;
 }
 
@@ -290,7 +279,8 @@ body {
   font-size: 1.25rem;
   margin-block: 0.7rem;
 }
-.resume .divider, .resume .wrapper {
+.resume .divider,
+.resume .wrapper {
   margin-block: 0;
   padding: 0rem;
 }
@@ -429,30 +419,53 @@ body {
   .cards-container > * {
     margin-block: 1rem;
   }
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: center;
+  }
   .card {
-    padding-top: 20rem;
-    margin-block: 2.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    min-width: 18rem;
+    max-width: 21rem;
+    min-height: 10rem;
+    min-height: 21rem;
     border-radius: 30px;
-    max-width: 22rem;
-    align-self: center;
-    margin-inline: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .card img {
-    top: -0.8rem;
-    width: 8rem;
+    max-width: clamp(8rem, 20vw, 15rem);
+    margin-bottom: 1rem;
   }
   .card h3 {
-    top: 10rem;
+    margin-bottom: 1rem;
   }
   .card p {
-    top: 13rem;
     margin-inline: 2rem;
+    margin-bottom: 1rem;
   }
-  .card .card-btn {
-    top: 18rem;
+  .card-btn {
+    background: #ECB365;
+    color: #064663;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
   }
-  .card > * {
-    position: fixed;
+  .card-btn:hover {
+    background: linear-gradient(100deg, #ebcda2, #ECB365);
+    --underline-width: 100%;
+    transition: background 300ms;
+  }
+  .card-btn span {
+    background: linear-gradient(#041C32 0 0) bottom left/var(--underline-width, 0%) 0.1em no-repeat;
+    padding-left: 7px;
+    transition: background-size 0.5s;
   }
   .swiper-slide {
     height: auto;
@@ -466,6 +479,9 @@ body {
   .resume h1 {
     margin-top: 8rem;
   }
+  .resume li {
+    margin-inline-start: 1rem;
+  }
 }
 @media (min-width: 1000px) {
   h1 {
@@ -475,7 +491,7 @@ body {
     font-size: 4rem;
   }
   h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .navbar-show,
 .navbar-close {
@@ -515,11 +531,20 @@ body {
     font-size: 2.5rem;
   }
   .cards-container {
-    display: grid;
+    display: flex;
     justify-content: center;
-    grid-template-columns: repeat(2, 25rem);
     gap: 2rem;
     margin-block: 2rem;
+  }
+  .cards-container .card {
+    min-width: 20rem;
+  }
+  .cards-container .card h3 {
+    margin-top: 1rem;
+  }
+  .cards-container .card p {
+    margin-bottom: 1rem;
+    padding-inline: 2rem;
   }
   .resume li {
     margin-left: 3rem;
@@ -528,6 +553,18 @@ body {
 @media (max-width: 1600px) {
   .nav-menu {
     margin-inline: 20%;
+  }
+}
+@media (800px < width < 1800px) {
+  .cards-container {
+    display: grid;
+    justify-content: center;
+    margin-inline: auto;
+    grid: repeat(2, 24rem)/auto-flow 22rem;
+  }
+  .cards-container .card {
+    min-width: 16rem;
+    max-width: 25rem;
   }
 }
 
