@@ -131,6 +131,7 @@ a {
 
 body {
   background: #041C32;
+  height: 100vh;
 }
 
 .link-btn {
@@ -316,8 +317,14 @@ body {
 }
 
 @media (max-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
   .App {
     padding-inline: clamp(0.5rem, 3vh, 2rem);
+    overflow: hidden;
   }
   h1 {
     font-size: 4rem;
