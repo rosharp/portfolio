@@ -1,1 +1,0 @@
-# Vitaly Bekshnev's Portfolio
