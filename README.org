@@ -38,4 +38,6 @@ Cream yellow: #ECB365
 
 - Fix text width
 - Refactor code
+- Add [[https://github.com/rosharp/react-test-deployed][Scandiweb test task to projects]]
 - Add relevant information
+- Language switcher
