@@ -51,7 +51,7 @@ h3 {
 
 p,
 li {
-  color: hsl(195deg, 31%, 75%);
+  color: hsl(195, 31%, 75%);
 }
 
 ul {
@@ -65,7 +65,7 @@ a {
 }
 
 .active {
-  color: hsl(191deg, 32%, 56%);
+  color: hsl(191, 32%, 56%);
 }
 
 .App {
@@ -113,8 +113,8 @@ a {
 
 .divider {
   position: relative;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   height: 1px;
 }
 
@@ -177,7 +177,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
+  background: linear-gradient(100deg, rgba(0, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
   backdrop-filter: blur(8px);
   border-radius: 30px;
   height: 23rem;
@@ -379,7 +379,7 @@ body {
   }
   .nav-text a {
     text-decoration: none;
-    color: hsl(195deg, 31%, 75%);
+    color: hsl(195, 31%, 75%);
     font-size: 18px;
     height: 100%;
     display: flex;
@@ -501,7 +501,7 @@ body {
     font-size: 2.5rem;
   }
   .navbar-show,
-.navbar-close {
+  .navbar-close {
     display: none;
   }
   .nav-menu {
@@ -509,7 +509,7 @@ body {
     list-style: none;
     justify-content: center;
     margin-inline: 33%;
-    background: linear-gradient(100deg, rgba(6, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
+    background: linear-gradient(100deg, rgba(0, 70, 99, 0.75), rgba(4, 41, 58, 0.75));
     backdrop-filter: blur(8px);
     padding-block: 1rem;
     margin-bottom: 2rem;
